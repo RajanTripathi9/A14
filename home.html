@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A14 Cookie</title>
+    <meta charset="utf-8">
+    <script type="text/Javascript">
+        function cookieSetter() {
+            if( document.myform.customer.value == "" ) {
+                  alert("Enter some value!");
+                  return;
+            }
+            cValue = escape(document.entryForm.fullname.value) + ";";
+            document.cookie = "name=" + cValue;
+            document.write ("Setting Cookies : " + "name=" + cValue );
+        }
+    </script>
+</head>
+<body>
+    <form name="entryForm" action="">
+        Enter your name: <input type="text" name="fullname"/>
+        <input type="button" value="Set New Cookie" onclick="cookieSetter();"/>
+    </form>
+</body>
+</html>
